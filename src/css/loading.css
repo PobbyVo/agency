@@ -1,0 +1,36 @@
+.loading-anim-wrapper {
+  z-index: 50;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 0;
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  display: flex;
+  /* transform: translateY(-50%); */
+}
+
+.logo-anim-wrapper {
+  z-index: 1;
+  width: 100%;
+}
+
+.lottie-anim {
+  width: 100%;
+  margin-top: 0.07em;
+}
+
+.loading-bg-color {
+  z-index: 0;
+  color: #111;
+  background-color: #111;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
