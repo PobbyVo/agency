@@ -1,0 +1,8 @@
+.svg-wrapper {
+  width: 100vw;
+  overflow: hidden;
+  /* margin-block: 14px; */
+  position: relative;
+  z-index: 3;
+  padding-left: 22px;
+}
