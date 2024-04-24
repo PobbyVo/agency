@@ -1,7 +1,8 @@
-import gsap from "gsap";
+import gsap, { TweenMax } from "gsap";
 import React, { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
+
 const Loading = () => {
   const svgOne = useRef(null);
   const svgTwo = useRef(null);
@@ -20,6 +21,7 @@ const Loading = () => {
   const pathSeven = useRef(null);
 
   useEffect(() => {
+    gsap.to(window, { scrollTo: { y: 0 } });
     let t1 = gsap
       .timeline({
         scrollTrigger: {
@@ -385,9 +387,13 @@ const Loading = () => {
       })
       .to("body", { overflow: "" });
 
-    // t1.eventCallback("onComplete", () => {
-    //   window.scrollTo(0, 0);
-    // });
+    t1.eventCallback("onStart", () => {
+      window.scroll(0, 0);
+    });
+
+    return () => {
+      t1.kill();
+    };
   }, []);
 
   return (

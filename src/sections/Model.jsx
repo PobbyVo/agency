@@ -24,7 +24,7 @@ const Model = () => {
           end: "bottom+=2500 bottom",
           scrub: 2,
           toggleActions: "play none none none",
-          markers: true,
+          // markers: true,
         },
       })
       .to(

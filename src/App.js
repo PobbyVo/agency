@@ -14,23 +14,13 @@ function App() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    // Reload the page to start at the top section
-    // gsap.to(sectionRef.current, {
-    //   delay: 5,
-    //   visibility: " visible",
-    //   pointerEvents: "unset",
-    //   duration: 1,
-    //   // opacity: 1,
-    // });
+    window.scroll(0, 0);
   }, []);
 
   return (
     <div>
       <Loading />
-      <div
-        ref={sectionRef}
-        // style={{ visibility: "hidden", pointerEvents: "none" }}
-      >
+      <div ref={sectionRef}>
         <Hero />
         <Aims />
         <About />

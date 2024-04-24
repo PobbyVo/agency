@@ -1,6 +1,47 @@
+import gsap from "gsap";
 import React, { useEffect } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
+  useEffect(() => {
+    let t1 = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: "#heroAbout",
+          start: "top-=800 top",
+          end: "bottom bottom",
+          // scrub: 2,
+          // toggleActions: "play none none none",
+          // markers: true,
+        },
+      })
+      .fromTo(
+        ".content-part-1 .big-text-block",
+        { y: "100%" },
+        { y: "0", duration: 1, stagger: 0.05 },
+        "key1"
+      );
+
+    let t2 = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: "#heroAbout",
+          start: "top+=200 top",
+          end: "bottom bottom",
+          // scrub: 2,
+          // toggleActions: "play none none none",
+          // markers: true,
+        },
+      })
+      .fromTo(
+        ".content-part-2 .big-text-block",
+        { y: "100%" },
+        { y: "0", duration: 1, stagger: 0.05 },
+        "key1"
+      );
+  }, []);
+
   return (
     <div>
       <div id="heroAbout">

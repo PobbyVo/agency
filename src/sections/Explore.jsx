@@ -18,7 +18,7 @@ const Explore = () => {
           start: "top-=500 top",
           end: "bottom bottom",
           scrub: 2,
-          markers: true,
+          // markers: true,
         },
       })
       .fromTo(
