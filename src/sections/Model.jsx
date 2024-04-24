@@ -21,9 +21,9 @@ const Model = () => {
           trigger: "#heroStart",
           start: "top top",
           endTrigger: "#spaceSection",
-          end: "bottom+=2500 bottom",
+          end: "bottom+=2000 bottom",
           scrub: 2,
-          toggleActions: "play none none none",
+          // toggleActions: "play none none reset",
           // markers: true,
         },
       })
@@ -183,34 +183,58 @@ const Model = () => {
         "key2"
       )
       .to(
-        total.current,
+        svgSeven.current,
         {
-          transform: `translate3d(0, -150%, 0) scale3d(4, 4, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`,
-
-          // ease: "power2.inOut",
+          // scale: 0.5,
+          // rotation: 0,
+          // transform: `translate(792px, 656px)`,
+          // visibility: "hidden",
+          opacity: 0,
+          duration: 0.01,
         },
         "key3"
       )
       .to(
         svgOne.current,
         {
-          scale: 0.5,
-          rotation: 0,
-          transform: `translate(792px, 656px)`,
+          // scale: 0.5,
+          // rotation: 0,
+          // transform: `translate(791.8px, 656px)`,
           visibility: "hidden",
         },
-        "key3"
+        "key4"
       )
       .to(
         svgTwo.current,
         {
-          scale: 0.5,
-          rotation: 0,
-          transform: `translate(791.8px, 656px)`,
+          // scale: 0.5,
+          // rotation: -0.067,
+          // transform: `translate(1156px, 655px)`,
           visibility: "hidden",
         },
-        "key3"
+        "key4"
       )
+      .to(
+        svgFive.current,
+        {
+          // scale: 0.5,
+          // rotation: 180,
+          // transform: `translate(1247px, 825.5px)`,
+          visibility: "hidden",
+          // opacity: 0,
+        },
+        "key4"
+      )
+      .to(
+        total.current,
+        {
+          transform: `translate3d(0, -150%, 0) scale3d(4, 4, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`,
+
+          // ease: "power2.inOut",
+        },
+        "key4"
+      )
+
       .to(
         svgThree.current,
         {
@@ -220,7 +244,7 @@ const Model = () => {
           transformOrigin: "left center",
           duration: 1,
         },
-        "key3"
+        "key4"
       )
       .to(
         svgFour.current,
@@ -231,18 +255,9 @@ const Model = () => {
           transformOrigin: "right center",
           duration: 1,
         },
-        "key3"
+        "key4"
       )
-      .to(
-        svgFive.current,
-        {
-          scale: 0.5,
-          rotation: -0.067,
-          transform: `translate(1156px, 655px)`,
-          visibility: "hidden",
-        },
-        "key3"
-      )
+
       .to(
         svgSix.current,
         {
@@ -252,17 +267,7 @@ const Model = () => {
           transformOrigin: "center center",
           duration: 1,
         },
-        "key3"
-      )
-      .to(
-        svgSeven.current,
-        {
-          scale: 0.5,
-          rotation: 180,
-          transform: `translate(1247px, 825.5px)`,
-          visibility: "hidden",
-        },
-        "key3"
+        "key4"
       );
 
     return () => {
