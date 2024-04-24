@@ -104,13 +104,14 @@ const Icon = () => {
   return (
     <div
       style={{
-        width: "100vw",
-        marginLeft: "-14px",
+        // width: "100vw",
+        // marginLeft: "-14px",
         position: "relative",
         zIndex: 2,
         background: "#e6e4de",
         paddingLeft: "0.97em",
         paddingRight: "0.97em",
+        overflow: "hidden",
       }}
     >
       <div className="svg-wrapper">
@@ -118,6 +119,7 @@ const Icon = () => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 368"
           preserveAspectRatio="xMidYMid meet"
+          style={{ width: "100%" }}
         >
           <defs>
             <clipPath id="__lottie_element_31">
