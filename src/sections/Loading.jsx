@@ -21,7 +21,7 @@ const Loading = () => {
   const pathSeven = useRef(null);
 
   useEffect(() => {
-    gsap.to(window, { scrollTo: { y: 0 } });
+    // gsap.to(window, { scrollTo: { y: 0 } });
     let t1 = gsap
       .timeline({
         scrollTrigger: {
