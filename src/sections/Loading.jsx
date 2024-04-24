@@ -32,9 +32,8 @@ const Loading = () => {
       })
       .to("body", { overflow: "hidden" }, "key0")
       .to(
-        svgOne.current,
+        [svgOne.current, svgTwo.current, svgThree.current],
         {
-          //   transform: "matrix(0.3, 0, 0, 0.45, 750, 431.114)",
           scaleY: 0.45,
           transformOrigin: "bottom bottom",
           duration: 0.8,
@@ -42,27 +41,7 @@ const Loading = () => {
         "key1"
       )
       .to(
-        svgTwo.current,
-        {
-          //   transform: "matrix(0.3, 0, 0, 0.45, 750, 431.114)",
-          scaleY: 0.45,
-          transformOrigin: "bottom bottom",
-          duration: 0.8,
-        },
-        "key1"
-      )
-      .to(
-        svgThree.current,
-        {
-          //   transform: "matrix(0.3, 0, 0, 0.45, 750, 431.114)",
-          scaleY: 0.45,
-          transformOrigin: "bottom bottom",
-          duration: 0.8,
-        },
-        "key1"
-      )
-      .to(
-        svgFour.current,
+        [svgFour.current, svgFive.current],
         {
           scaleY: 0.45,
           transformOrigin: "bottom bottom",
@@ -72,27 +51,7 @@ const Loading = () => {
         "key1"
       )
       .to(
-        svgFive.current,
-        {
-          scaleY: 0.45,
-          transformOrigin: "bottom bottom",
-          duration: 0.8,
-          delay: 0.2,
-        },
-        "key1"
-      )
-      .to(
-        svgSix.current,
-        {
-          scaleY: 0.45,
-          transformOrigin: "bottom bottom",
-          duration: 0.8,
-          delay: 0.4,
-        },
-        "key1"
-      )
-      .to(
-        svgSeven.current,
+        [svgSix.current, svgSeven.current],
         {
           scaleY: 0.45,
           transformOrigin: "bottom bottom",
@@ -110,18 +69,7 @@ const Loading = () => {
         "key2"
       )
       .to(
-        svgOne.current,
-        {
-          translateY: 486.8,
-          scaleY: 1,
-          scaleX: 1,
-          duration: 0.8,
-          transformOrigin: "right center",
-        },
-        "key2"
-      )
-      .to(
-        svgTwo.current,
+        [svgOne.current, svgTwo.current, svgThree.current],
         {
           transformOrigin: "right center",
           translateY: 486.8,
@@ -132,18 +80,7 @@ const Loading = () => {
         "key2"
       )
       .to(
-        svgThree.current,
-        {
-          translateY: 486.8,
-          transformOrigin: "right center",
-          scaleY: 1,
-          scaleX: 1,
-          duration: 0.8,
-        },
-        "key2"
-      )
-      .to(
-        svgFour.current,
+        [svgFour.current, svgFive.current, svgSix.current, svgSeven.current],
         {
           translateY: 486.8,
           transformOrigin: "center center",
@@ -154,91 +91,15 @@ const Loading = () => {
         "key2"
       )
       .to(
-        svgFive.current,
-        {
-          translateY: 486.8,
-
-          transformOrigin: "center center",
-          scaleY: 1,
-          scaleX: 1,
-          duration: 0.8,
-        },
-        "key2"
-      )
-      .to(
-        svgSix.current,
-        {
-          //   transform: "translate(1000px,580px)",
-          translateY: 486.8,
-          transformOrigin: "center center",
-          scaleY: 1,
-          scaleX: 1,
-          duration: 0.8,
-        },
-        "key2"
-      )
-      .to(
-        svgSeven.current,
-        {
-          translateY: 486.8,
-          //   transform: "translate(1000px,580px)",
-          transformOrigin: "center center",
-          scaleY: 1,
-          scaleX: 1,
-          duration: 0.8,
-        },
-        "key2"
-      )
-      .to(
-        pathOne.current,
-        {
-          fill: "rgb(20,20,20)",
-          duration: 1,
-        },
-        "key2"
-      )
-      .to(
-        pathTwo.current,
-        {
-          fill: "rgb(20,20,20)",
-          duration: 1,
-        },
-        "key2"
-      )
-      .to(
-        pathThree.current,
-        {
-          fill: "rgb(20,20,20)",
-          duration: 1,
-        },
-        "key2"
-      )
-      .to(
-        pathFour.current,
-        {
-          fill: "rgb(20,20,20)",
-          duration: 1,
-        },
-        "key2"
-      )
-      .to(
-        pathFive.current,
-        {
-          fill: "rgb(20,20,20)",
-          duration: 1,
-        },
-        "key2"
-      )
-      .to(
-        pathSix.current,
-        {
-          fill: "rgb(20,20,20)",
-          duration: 1,
-        },
-        "key2"
-      )
-      .to(
-        pathSeven.current,
+        [
+          pathOne.current,
+          pathTwo.current,
+          pathThree.current,
+          pathFour.current,
+          pathFive.current,
+          pathSix.current,
+          pathSeven.current,
+        ],
         {
           fill: "rgb(20,20,20)",
           duration: 1,

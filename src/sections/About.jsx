@@ -11,9 +11,6 @@ const About = () => {
           trigger: "#heroAbout",
           start: "top-=800 top",
           end: "bottom bottom",
-          // scrub: 2,
-          // toggleActions: "play none none none",
-          // markers: true,
         },
       })
       .fromTo(
@@ -29,9 +26,6 @@ const About = () => {
           trigger: "#heroAbout",
           start: "top+=200 top",
           end: "bottom bottom",
-          // scrub: 2,
-          // toggleActions: "play none none none",
-          // markers: true,
         },
       })
       .fromTo(
